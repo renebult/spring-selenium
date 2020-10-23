@@ -17,10 +17,7 @@ public class WindowSwitchService {
                 .stream()
                 .map(handle -> driver.switchTo().window(handle).getTitle())
                 .filter(t -> t.startsWith(title))
-                .findFirst()
-                .orElseThrow(() -> {
-                    throw new RuntimeException("No such window");
-                });
+                .findFirst();
     }
 
     public void switchByIndex(final int index){
