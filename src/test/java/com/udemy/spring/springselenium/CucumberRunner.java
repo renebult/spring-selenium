@@ -5,13 +5,13 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        strict = true,
         features = "classpath:features",
         glue = "com.udemy.spring.springselenium.bdd",
-        tags = { "@visa" },
+        tags = "@visa",
         plugin = {
                 "pretty",
-                "html:/home/vins/Documents/udemy/temp/"
+                "html:target/cucumber-report.html",
+                "json:target/cucumber.json"
         }
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
@@ -23,3 +23,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     }
 
 }
+
+
+// https://github.com/cucumber/cucumber-jvm/blob/main/CHANGELOG.md
+// mvn clean verify -Dcucumber.filter.tags="@vsa"
