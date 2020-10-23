@@ -15,7 +15,6 @@
 	<description>spring selenium framework</description>
 
 	<properties>
-		<java.version>8</java.version>
 		<cucumber.version>6.8.0</cucumber.version>
 		<selenium.version>3.141.59</selenium.version>
 		<webdrivermanager.version>3.8.1</webdrivermanager.version>
